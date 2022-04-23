@@ -19,6 +19,8 @@ public class Book {
         return bookName;
     }
 
+    public String getAuthorName() { return author.getAuthorLastName() + " " + author.getAuthorName(); }
+
     public Author getAuthor() {
         return author;
     }
