@@ -10,10 +10,10 @@ public class Book {
 
     Book(String bookName, Author author , int publicationYear) {
         if (bookName.length() != 0) this.bookName = bookName;
-            else throw new RuntimeException("Название книги не должно быть пустым");
+            else throw new IllegalArgumentException("Название книги не должно быть пустым");
         this.author = author;
         if (publicationYear >= 1900 && publicationYear <= LocalDate.now().getYear()) this.publicationYear = publicationYear;
-            else throw new RuntimeException("Введите корректный год издательства");
+            else throw new IllegalArgumentException("Введите корректный год издательства");
     }
 
     @Override
