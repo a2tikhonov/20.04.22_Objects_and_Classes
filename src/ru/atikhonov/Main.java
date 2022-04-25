@@ -41,5 +41,14 @@ public class Main {
         library.printBookInfo("Castle Rock");
         library.setPublicationYear("Castle Rock", 1981);
         library.printAllBooks();
+        Author bulgakov2 = new Author("Михаил", "Булгаков");
+        if (bulgakov.equals(bulgakov2)) System.out.println("Bulgakov equals");
+        if (bulgakov.hashCode() == bulgakov2.hashCode()) System.out.println("Bulgakov hash equals");
+        System.out.println("bulgakov2.toString() = " + bulgakov2.toString());
+        Book masterAndMargarita2 = new Book("Мастер и Маргарита", bulgakov ,1966);
+        System.out.println("masterAndMargarita2.toString() = " + masterAndMargarita2.toString());
+        if (masterAndMargarita2.equals(masterAndMargarita)) System.out.println("MasterAndMargarita books equals");
+        if (masterAndMargarita2.hashCode() == masterAndMargarita.hashCode()) System.out.println("MasterAndMargarita books hash equals");
+        //if (masterAndMargarita2.hashCode() != castleRock.hashCode()) System.out.println("MasterAndMargarita and CastleRock books hash doesnt equals");
     }
 }
